@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% extends 'basicapp/base.html' %}
+
+{% block body_block %}
+
+<h1>Fill out form</h1>
+	<form method="post">
+	{{form.as_p}}
+	{% csrf_token %}
+	<input type="submit" name="" value="submit">
+	</form>
+</div>
+<a href="{% url 'basicapp:home_page' %}">Go to home page</a>
+
+{% endblock %}
